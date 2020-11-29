@@ -1,0 +1,80 @@
+body {
+    background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW6Mqg59vg5bWbDeOHFQ1hA32wgBicaBH16Q&usqp=CAU);
+    background-size: 10000px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.title{
+    text-align: center;
+}
+ul{
+ list-style-type: none;
+ border: 10px solid darkslategray ;
+ background-color: rgb(17, 121, 77);
+ overflow: hidden;
+ padding: 0px;
+ margin: 0px;
+
+}
+
+li{
+    float: left;
+}
+
+a{
+ text-decoration: none;
+ color: rgb(73, 75, 104);
+
+}
+
+li a{
+    display: block;
+    color: darkkhaki;
+    padding-right: 25px;
+    padding-left: 25px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+li a:hover{
+  color: rgb(160, 118, 63);
+  background-color:darkgrey;
+
+}
+
+li a.active{
+ background-color: grey;
+ color:black;
+
+}
+
+.Nav-right{
+    float: right;
+}
+
+div{
+border:3px solid;
+border-style: double;
+
+
+}
+
+table{
+ width: 200px;
+ color:black;
+ 
+
+}
+
+thead tr{
+ text-align: center;
+ background-color: khaki;
+ font: bolder;
+ font-size: x-large;
+
+}
+
+tbody tr:nth-child(even){
+    background-color: beige;
+}
