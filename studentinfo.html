@@ -1,36 +1,28 @@
 <html>
-    <div id ="border">
+    
         
    <head>
     
     
 
        <title> Internet Technology</title>
-       <style>
-      #border {
-             
-             border-style: solid;
-             border-width:1px;
-             border-color:black;
-             margin: 20px;
-             padding: 200px;
-             }
-     
-    
-       </style>
-        
-    
-    
-    
+       <link rel="stylesheet"type="text/css"href="style.css">
     
    </head>
 
    <body>
        
-    <a href = "https://www.fue.edu.eg/"target="_self">HOME</a>
-    <a href = "studentlist.html" target="_blank">STUDENT LIST</a>
-    <a href = # >STUDENT NAME</a>
+    <Nav>
+        <ul>
+   <li> <a href = "https://www.fue.edu.eg/"target="_self">HOME</a></li>
+   <li> <a href ="studentlist.html"  target="_blank"class="Nav">STUDENT LIST</a></li>
+   <li> <a href = "studentinfo.html" target="_blank"class="active">STUDENT NAME</a></li>
+   <li class ="Nav-right"> <a href="#">LOGOUT</a></li>
+   </ul>
+</Nav>
        <form>
+           <fieldset style="border: 2px solid; text-align: center; width: 30%; border-radius: 15px;">
+           <legend style="text-align: left;" >Student Information</legend>
            <p>
            <label>
                Name
@@ -73,6 +65,7 @@
            </label>
        </p>
        <input type="submit">
+    </fieldset>
     
     </form>
 
@@ -84,6 +77,6 @@
     
     </footer>
     
-    </div>
+    
 
     </Html
