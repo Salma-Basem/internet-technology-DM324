@@ -69,10 +69,53 @@
 </tr>
 </tfoot>
 </table>
-</body>
-</body>
+</section>
+</hr>
+
 <footer>
     <a href = https://www.fue.edu.eg/> &copy; Future university in Egypt </a>
     <a href = mailto:20191743@fue.edu.eg> contact us</a>
 </footer>
+<script>
+    function init()
+    {
+        var table ="";
+        table =table + "<table border='5'>" +
+          "<thead>"+
+          "<tr>"+
+          "<td>Name</td>"+
+       "<td>ID</td>"+
+        "<td>Email</td>"+
+        "<td>photo</td>"+
+        "</tr>"+
+        "</thead>"+
+        "<tbody>";
+        var counter =0;
+        for(var i=0;)
+
+
+        var StudentID = dataSource[row][0];
+        var StudentNAME = dataSource[row][1];
+        var StudentEmail = dataSource[row][2];
+         var Studentphoto = dataSource[row][3];
+
+      table +="<tr>";
+      table +="<td>"+ StudentID+"</td>";
+      table +="<td>"+ StudentNAME+"</td>";
+      table +="<td>"+ StudentEmail+"</td>";
+      table +="<td>"+ Studentphoto+"</td>";
+      table +="</tr>";
+
+   counter++;
+
+ table+="</tbody>"+
+   "<td colspan='4'> Student Number=" +counter+"</td>"+
+   "</tr>"+     
+ "</tfoot>"+
+"</table>";
+        document.getElementById("mytable").innerHTML = table;
+    }
+    }
+</script>
+</body>
 </Html>
