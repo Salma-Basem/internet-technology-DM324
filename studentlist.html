@@ -2,9 +2,16 @@
 <head>
     <title> Internet Technology</title>
     <link rel="stylesheet"type="text/css"href="style.css">
+
+    <script>
+       var dataSource = [["20191743","salma","20191743@fue.edu.eg","img src="C:\xampp\htdocs\IT\download.jpg" alt = " galaxy image" width = "200" height ="200""],
+       [" 2019188","yasmine","2019888@fue.edu.eg","img src="C:\xampp\htdocs\IT\download.jpg" alt = " galaxy image" width = "200" height ="200""]];
+
+    </script>
 </head>
-<body>
-    <Nav>
+<body on;oad="init();">
+
+   <Nav>
         <ul>
    <li> <a href = "https://www.fue.edu.eg/"target="_self">HOME</a></li>
    <li> <a href ="studentlist.html"  target="_blank"class="active">STUDENT LIST</a></li>
@@ -12,6 +19,16 @@
    <li class ="Nav-right"> <a href="#">LOGOUT</a></li>
    </ul>
 </Nav>
+
+<hr>
+  <section>
+      <div class="searchbar">
+          <p>
+              <input type ="search" class="searchbox" id ="txtSearch" oninput="mysearch()">
+          </p>
+          </div>
+          <div id="myTable"> </div>
+
 <table border="5">
    <thead>
        <tr>
