@@ -77,9 +77,43 @@
     <a href = mailto:20191743@fue.edu.eg> contact us</a>
 </footer>
 <script>
-    function init()
+
+    document.getElementsByID("myTable").innerHTML = table;
+    }
+    function mysearch()
+{
+  var input = document.getElementById("txtSearch").value;
+  console.log(input);
+  searchAlgorithm(input);
+
+
+    }
+
+    function searchAlgorithm (input)
+{
+    var flat =[].concat.apply([],dataSource);
+    console.log(flat);
+    var col = flat.indexOf(input);
+    console.log(col);
+
+     var row = -1;
+
+    if( col != -1)
+{
+    while(dataSource[++row].length <= col)
+{
+  col = col - datasource[row].length;
+}
+    resulttable(row);
+}
+  else {}
+    init();
+
+    }
+    function resulttable(row)
     {
-        var table ="";
+        var table = "";
+
         table =table + "<table border='5'>" +
           "<thead>"+
           "<tr>"+
@@ -90,10 +124,10 @@
         "</tr>"+
         "</thead>"+
         "<tbody>";
-        var counter =0;
-        for(var i=0;)
-
-
+        
+          var  counter =0;
+          for( var i=0; i<dataSource.length;i++)
+{
         var StudentID = dataSource[row][0];
         var StudentNAME = dataSource[row][1];
         var StudentEmail = dataSource[row][2];
@@ -107,7 +141,7 @@
       table +="</tr>";
 
    counter++;
-
+}
  table+="</tbody>"+
    "<td colspan='4'> Student Number=" +counter+"</td>"+
    "</tr>"+     
