@@ -86,3 +86,17 @@ tbody tr:nth-child(even){
   border-radius: 15px;
 
 }
+
+.searchbar:hover{
+   width:100%;
+   padding:8px 8px;
+   border:none;
+   outline:none;
+
+}
+
+table{
+  width:100%;
+  border-collapse: collapse;
+
+}
