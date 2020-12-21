@@ -4,8 +4,8 @@
     <link rel="stylesheet"type="text/css"href="style.css">
 
     <script>
-       var dataSource = [["20191743","salma","20191743@fue.edu.eg","img src="C:\xampp\htdocs\IT\download.jpg" alt = " galaxy image" width = "200" height ="200""],
-       [" 2019188","yasmine","2019888@fue.edu.eg","img src="C:\xampp\htdocs\IT\download.jpg" alt = " galaxy image" width = "200" height ="200""]];
+       var dataSource = [["20191743","salma","20191743@fue.edu.eg","url or image id"],
+       [" 2019188","yasmine","2019888@fue.edu.eg"," url or image id"]];
 
     </script>
 </head>
@@ -80,6 +80,53 @@
 </footer>
 <script>
 
+
+    function init()
+    {
+        var table = "";
+
+        table =table + "<table border='5'>" +
+             "<thead>"+
+            "<tr>"+
+          "<td>Name</td>"+
+          "<td>ID</td>"+
+          "<td>Email</td>"+
+          "<td>photo</td>"+
+           "</tr>"+
+         "</thead>"+
+
+"<tbody>";
+
+  
+var  counter =0;
+for(var i=0; i<datasource.length;i++)
+    
+{
+        var StudentID = dataSource[row][0];
+        var StudentNAME = dataSource[row][1];
+        var StudentEmail = dataSource[row][2];
+         var Studentphoto = dataSource[row][3];
+
+      table +="<tr>";
+      table +="<td>"+ StudentID+"</td>";
+      table +="<td>"+ StudentNAME+"</td>";
+      table +="<td>"+ StudentEmail+"</td>";
+      table +="<td>"+ Studentphoto+"</td>";
+      table +="</tr>";
+
+   counter++;
+}
+ table +="</tbody>"+
+ "<tfoot>"+
+ "<tr>"+
+   "<td colspan='4'> Student Number=" +counter+"</td>"+
+   "</tr>"+     
+ "</tfoot>"+
+
+   
+
+"</table>";
+
     document.getElementsByID("myTable").innerHTML = table;
     }
     function mysearch()
@@ -118,17 +165,18 @@
 
         table =table + "<table border='5'>" +
           "<thead>"+
-          "<tr>"+
-          "<td>Name</td>"+
-       "<td>ID</td>"+
-        "<td>Email</td>"+
-        "<td>photo</td>"+
-        "</tr>"+
+              "<tr>"+
+                  "<td>Name</td>"+
+                  "<td>ID</td>"+
+                  "<td>Email</td>"+
+                  "<td>photo</td>"+
+         "</tr>"+
         "</thead>"+
-        "<tbody>";
+
+        "<tbody>"
         
           var  counter =0;
-          for( var i=0; i<dataSource.length;i++)
+    
 {
         var StudentID = dataSource[row][0];
         var StudentNAME = dataSource[row][1];
@@ -144,7 +192,9 @@
 
    counter++;
 }
- table+="</tbody>"+
+ table +="</tbody>"+
+ "<tfoot>"+
+ "<tr>"+
    "<td colspan='4'> Student Number=" +counter+"</td>"+
    "</tr>"+     
  "</tfoot>"+
