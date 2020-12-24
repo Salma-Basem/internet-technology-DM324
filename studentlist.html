@@ -13,11 +13,11 @@
 
    <Nav>
         <ul>
-   <li> <a href = "https://www.fue.edu.eg/"target="_self">HOME</a></li>
-   <li> <a href ="studentlist.html"  target="_blank"class="active">STUDENT LIST</a></li>
-   <li> <a href = "studentinfo.html" target="_blank"class="Nav">STUDENT NAME</a></li>
-   <li class ="Nav-right"> <a href="#">LOGOUT</a></li>
-   </ul>
+           <li> <a href = "https://www.fue.edu.eg/"target="_self">HOME</a></li>
+           <li> <a href ="studentlist.html"  target="_blank"class="active"> STUDENT LIST</a></li>
+           <li> <a href = "studentinfo.html" target="_blank"class="Nav"> STUDENT NAME</a></li>
+           <li class ="Nav-right"> <a href="#">LOGOUT</a></li>
+       </ul>
 </Nav>
 
 <hr>
@@ -26,8 +26,8 @@
           <p>
               <input type ="search" class="searchbox" id ="txtSearch" oninput="mysearch()">
           </p>
-          </div>
-          <div id="myTable"> </div>
+      </div>
+     <div id="myTable"> </div>
   </section>
 </hr>
 
@@ -53,10 +53,10 @@
        <tr>
         <td colspan="2">
             
-        </ol> 
+      
         <li> yasmine</li>  
         <li> 2019188</li>
-    </ol>
+    
     </td>
         <td>2019888@fue.edu.eg</td>
         <td> <img src="C:\xampp\htdocs\IT\download.jpg" alt = " galaxy image" width = "200" height ="200"> </td>  
@@ -116,7 +116,7 @@ for(var i=0; i<datasource.length;i++)
 
    counter++;
 }
- table +="</tbody>"+
+ /**table +="</tbody>"+
  "<tfoot>"+
  "<tr>"+
    "<td colspan='4'> Student Number=" +counter+"</td>"+
@@ -125,7 +125,7 @@ for(var i=0; i<datasource.length;i++)
 
    
 
-"</table>";
+"</table>";*/
 
     document.getElementsByID("myTable").innerHTML = table;
     }
@@ -147,19 +147,19 @@ for(var i=0; i<datasource.length;i++)
 
      var row = -1;
 
-    if( col != -1)
+    if(col != -1)
 {
     while(dataSource[++row].length <= col)
 {
   col = col - datasource[row].length;
 }
-    resulttable(row);
+    ResultTable(row);
 }
   else {}
     init();
 
     }
-    function resulttable(row)
+    function ResultTable(row)
     {
         var table = "";
 
@@ -173,15 +173,15 @@ for(var i=0; i<datasource.length;i++)
          "</tr>"+
         "</thead>"+
 
-        "<tbody>"
+        "<tbody>";
         
           var  counter =0;
     
-{
+
         var StudentID = dataSource[row][0];
         var StudentNAME = dataSource[row][1];
         var StudentEmail = dataSource[row][2];
-         var Studentphoto = dataSource[row][3];
+        var Studentphoto = dataSource[row][3];
 
       table +="<tr>";
       table +="<td>"+ StudentID+"</td>";
@@ -191,7 +191,7 @@ for(var i=0; i<datasource.length;i++)
       table +="</tr>";
 
    counter++;
-}
+
  table +="</tbody>"+
  "<tfoot>"+
  "<tr>"+
@@ -199,9 +199,9 @@ for(var i=0; i<datasource.length;i++)
    "</tr>"+     
  "</tfoot>"+
 "</table>";
-        document.getElementById("mytable").innerHTML = table;
+        document.getElementById("myTable").innerHTML = table;
     }
     
-</script>
+  </script>
 </body>
-</Html>
+</html>
