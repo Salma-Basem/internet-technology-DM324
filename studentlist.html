@@ -11,14 +11,16 @@
 </head>
 <body onload="init();">
 
-   <Nav>
+   <nav>
         <ul>
-           <li> <a href = "https://www.fue.edu.eg/"target="_self">HOME</a></li>
-           <li> <a href ="studentlist.html"  target="_blank"class="active"> STUDENT LIST</a></li>
-           <li> <a href = "studentinfo.html" target="_blank"class="Nav"> STUDENT NAME</a></li>
+           <li><a href = "index.html"target="_blank" class="Nav">HOME</a></li>
+           <li><a href ="#"class="active"> STUDENT LIST</a></li>
+           <li><a href = "studentinfo.html" target="_blank"class="Nav"> STUDENT NAME</a></li>
            <li class ="Nav-right"> <a href="#">LOGOUT</a></li>
+           <li class ="Nav-right"> <a href="signin.html">LOGIN</a></li>
+
        </ul>
-</Nav>
+</nav>
 
 <hr>
   <section>
@@ -27,7 +29,7 @@
               <input type ="search" class="searchbox" id ="txtSearch" oninput="mysearch()">
           </p>
       </div>
-     <div id="myTable"> </div>
+     <div id="myTable"></div>
   </section>
 </hr>
 
@@ -47,19 +49,14 @@
         <td>salma </td>
         <td>20191743</td>
         <td>20191743@fue.edu.eg</td>
-        <td> <img src="C:\xampp\htdocs\IT\download.jpg" alt = " galaxy image" width = "200" height ="200"> </td>
+        <td> <img src="#" alt = " galaxy image" width = "200" height ="200"> </td>
 
        </tr>
        <tr>
-        <td colspan="2">
-            
-      
-        <li> yasmine</li>  
-        <li> 2019188</li>
-    
-    </td>
-        <td>2019888@fue.edu.eg</td>
-        <td> <img src="C:\xampp\htdocs\IT\download.jpg" alt = " galaxy image" width = "200" height ="200"> </td>  
+          <td> yasmine</td>  
+          <td> 2019188</td>
+          <td> 2019888@fue.edu.eg</td>
+          <td> <img src="#" alt = " galaxy image" width = "200" height ="200"> </td>  
        </tr>
        
 
@@ -75,7 +72,7 @@
 </hr>
 
 <footer>
-    <a href = https://www.fue.edu.eg> &copy; Future university in Egypt </a>
+    <a href = "https://www.fue.edu.eg">&copy; Future university in Egypt </a>
     <a href = mailto:20191743@fue.edu.eg> contact us</a>
 </footer>
 <script>
@@ -105,7 +102,7 @@ for(var i=0; i<datasource.length;i++)
         var StudentID = dataSource[row][0];
         var StudentNAME = dataSource[row][1];
         var StudentEmail = dataSource[row][2];
-         var Studentphoto = dataSource[row][3];
+        var Studentphoto = dataSource[row][3];
 
       table +="<tr>";
       table +="<td>"+ StudentID+"</td>";
@@ -116,17 +113,7 @@ for(var i=0; i<datasource.length;i++)
 
    counter++;
 }
- /**table +="</tbody>"+
- "<tfoot>"+
- "<tr>"+
-   "<td colspan='4'> Student Number=" +counter+"</td>"+
-   "</tr>"+     
- "</tfoot>"+
-
-   
-
-"</table>";*/
-
+ 
     document.getElementsByID("myTable").innerHTML = table;
     }
     function mysearch()
@@ -140,7 +127,7 @@ for(var i=0; i<datasource.length;i++)
 
     function searchAlgorithm (input)
 {
-    var flat =[].concat.apply([],dataSource);
+    var flat =[].concat.apply([].dataSource);
     console.log(flat);
     var col = flat.indexOf(input);
     console.log(col);
@@ -195,7 +182,7 @@ for(var i=0; i<datasource.length;i++)
  table +="</tbody>"+
  "<tfoot>"+
  "<tr>"+
-   "<td colspan='4'> Student Number=" +counter+"</td>"+
+   "<td colspan ='4'> Student Number=" +counter+"</td>"+
    "</tr>"+     
  "</tfoot>"+
 "</table>";
